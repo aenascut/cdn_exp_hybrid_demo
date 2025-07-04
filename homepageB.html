@@ -171,7 +171,20 @@
             console.log("Tracked button click:", buttonType);
         }
 
-        alloy("applyResponse", ${templateVariables.applyResponseParam});
+     alloy("applyResponse", ${ templateVariables.applyResponseParam }).then(function (response) {
+            console.log("Response:", response);
+
+
+            alloy("sendEvent", {
+                decisionScopes: ["cdn-sdk-mbox-test"]
+            }).then(result => {
+                const h2Element = document.getElementById("h2_id");
+                const newParagraph = document.createElement("p");
+                newParagraph.textContent = JSON.stringify(result, null, 2);
+                h2Element.insertAdjacentElement("afterend", newParagraph);
+            })
+
+        });
 
     </script>
 </body>
