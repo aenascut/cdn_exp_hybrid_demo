@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage B - Adobe Alloy Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #6c757d;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #495057;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .content-section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .button-group {
+            margin: 1rem 0;
+        }
+        button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Homepage B</h1>
+        <p>Alternative Design with Adobe Alloy.js</p>
+    </header>
+    
+    <nav>
+        <a href="homepageA.html">Homepage A</a>
+        <a href="homepageB.html">Homepage B</a>
+    </nav>
+    
+    <main>
+        <div class="content-section">
+            <h2 id="h2_id">Welcome to Homepage B</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+        </div>
+        
+        <div class="content-section">
+            <h3>Feature Highlights</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Feature One</h4>
+                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Feature Two</h4>
+                    <p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h3>Interactive Elements</h3>
+            <div class="button-group">
+                <button onclick="trackButtonClick('feature')">Explore Features</button>
+                <button onclick="trackButtonClick('demo')">View Demo</button>
+                <button onclick="trackButtonClick('contact')">Contact Us</button>
+                <button onclick="trackButtonClick('download')">Download</button>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h3>Additional Information</h3>
+            <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+            <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Adobe Alloy Demo - Homepage B. All rights reserved.</p>
+    </footer>
+
+    <!-- Adobe Alloy.js -->
+    <script>
+        !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+        []).push(o),n[o]=function(){var u=arguments;return new Promise(
+        function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
+        (window,["alloy"]);
+      </script>
+      <script src="https://cdn1.adoberesources.net/alloy/2.27.0/alloy.min.js" async></script>
+    <script>
+        // Adobe Alloy Configuration
+        alloy("configure", {
+            "edgeConfigId": "6f670d48-16d1-4cef-bd2f-b9efde171c17",
+            "orgId": "906E3A095DC834230A495FD6@AdobeOrg",
+            "debugEnabled": true
+        });
+
+        // Track button clicks
+        function trackButtonClick(buttonType) {
+            alloy("sendEvent", {
+                "xdm": {
+                    "eventType": "web.webinteraction.linkClicks",
+                    "web": {
+                        "webInteraction": {
+                            "name": buttonType + " button click",
+                            "type": "other"
+                        }
+                    }
+                }
+            });
+            console.log("Tracked button click:", buttonType);
+        }
+
+        alloy("applyResponse", ${templateVariables.applyResponseParam});
+
+    </script>
+</body>
+</html> 

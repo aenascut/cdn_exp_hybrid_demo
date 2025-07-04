@@ -1,0 +1,22 @@
+{
+  "name": "demo-test",
+  "version": "0.0.3",
+  "description": "Contains the build system and files specific to the NodeJS platform.",
+  "type": "module",
+  "private": true,
+  "files": [
+    "lib",
+    "types"
+  ],
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "jest": {
+    "transform": {}
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@adobe/target-cdn-experimentation-nodejs-sdk": "0.0.4"
+  }
+}
