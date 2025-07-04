@@ -40,8 +40,7 @@ const getAEPCookies = (cookies) => {
 const createClientRequest = (req, config) => {
   const cookies = parseCookies(req.headers.cookie);
   const aepCookies = getAEPCookies(cookies);
-  const ecid = aepCookies.find(cookie => cookie.key === `kndctr_${config.orgId.replace("@", "_")}_identity`)?.value || "";
-
+  const ecid = cookies[ECID_COOKIE_NAME] || "";
 
   const identityMap = ecid
     ? {
@@ -177,4 +176,4 @@ function getContentByScope(sdkResponse, scope) {
   return null;
 }
 
-export { createClientRequest, getPersistedValues, getContentByActivityName, getContentByScope };
+export { createClientRequest, getPersistedValues, getContentByActivityName, getContentByScope, ECID_COOKIE_NAME };
