@@ -171,9 +171,8 @@
             console.log("Tracked button click:", buttonType);
         }
 
-     alloy("applyResponse", ${ templateVariables.applyResponseParam }).then(function (response) {
+     alloy("applyResponse", ${templateVariables.applyResponseParam}).then(function (response) {
             console.log("Response:", response);
-
 
             alloy("sendEvent", {
                 decisionScopes: ["cdn-sdk-mbox-test"]
