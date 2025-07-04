@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import { Client } from "@adobe/target-cdn-experimentation-nodejs-sdk";
 import { rules } from "./rules.js";
-import { createClientRequest, getPersistedValues, getContentByActivityName } from "./utils.js";
+import { createClientRequest, getPersistedValues, getContentByActivityName, ECID_COOKIE_NAME } from "./utils.js";
 import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -44,6 +44,7 @@ const handleGET = async (req, res) => {
 
     const clusterCookieName = `kndctr_${config.orgId.replace("@", "_")}_cluster`;
     res.setHeader("Set-Cookie", [
+      `${ECID_COOKIE_NAME}=${ecid};`,
       `${clusterCookieName}=${locationHintId};`,
     ]);
 
